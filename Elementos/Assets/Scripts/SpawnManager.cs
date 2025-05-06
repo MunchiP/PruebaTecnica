@@ -114,7 +114,18 @@ public class SpawnManager : MonoBehaviour
                 // Luego de crear el objeto, de manera random, de la lista e instanciarlo en la posición 
                 // Los agrego a la piscina
                 pooledObjets.Add(objetoCreado);
+
+
+
+                    // Bonus de colores en los objetos
+                    Renderer rend = objetoCreado.GetComponent<Renderer>();
+                    if (rend != null)
+                    {
+                        rend.material.color = new Color(Random.value, Random.value, Random.value);
+                    }
+
             }
         }
+
 
 }
